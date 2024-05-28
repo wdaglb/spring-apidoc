@@ -1,0 +1,526 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "API文档",
+    "version" : "1.0"
+  },
+  "tags" : [ {
+    "name" : "测试"
+  }, {
+    "name" : "目录1/testName"
+  } ],
+  "paths" : {
+    "/add" : {
+      "post" : {
+        "summary" : "添加",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/TestAddRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{id}" : {
+      "put" : {
+        "summary" : "修改",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/TestAddRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete" : {
+      "delete" : {
+        "summary" : "删除",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/LongIdsRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        }
+      }
+    },
+    "/get" : {
+      "get" : {
+        "summary" : "详情",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list" : {
+      "get" : {
+        "summary" : "列表",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list2" : {
+      "get" : {
+        "summary" : "qqq列表2",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/add" : {
+      "post" : {
+        "tags" : [ "测试" ],
+        "summary" : "添加",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/TestAddRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/{id}" : {
+      "get" : {
+        "tags" : [ "测试" ],
+        "summary" : "path详情",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/delete" : {
+      "delete" : {
+        "tags" : [ "测试" ],
+        "summary" : "删除",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/LongIdsRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        }
+      }
+    },
+    "/test/get" : {
+      "get" : {
+        "tags" : [ "测试" ],
+        "summary" : "query详情",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/list" : {
+      "get" : {
+        "tags" : [ "测试" ],
+        "summary" : "test列表",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/list2" : {
+      "get" : {
+        "tags" : [ "测试" ],
+        "summary" : "test列表2",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/add" : {
+      "post" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "添加",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/TestAddRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/{id}" : {
+      "put" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "修改",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/TestAddRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/delete" : {
+      "delete" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "删除",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/LongIdsRequest",
+                "exampleSetFlag" : false
+              },
+              "exampleSetFlag" : false
+            }
+          }
+        }
+      }
+    },
+    "/name/get" : {
+      "get" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "详情",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TestDto",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/list" : {
+      "get" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "列表",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/list2" : {
+      "get" : {
+        "tags" : [ "目录1/testName" ],
+        "summary" : "列表2",
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "exampleSetFlag" : false
+                },
+                "exampleSetFlag" : false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "TestDto" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "exampleSetFlag" : false
+          },
+          "name" : {
+            "type" : "string",
+            "exampleSetFlag" : false
+          },
+          "description" : {
+            "type" : "string",
+            "exampleSetFlag" : false
+          },
+          "createTime" : {
+            "type" : "string",
+            "format" : "date-time",
+            "exampleSetFlag" : false
+          },
+          "test" : {
+            "type" : "string",
+            "exampleSetFlag" : false,
+            "enum" : [ "opt1", "opt2" ]
+          },
+          "test2" : {
+            "type" : "cn.kecms.library.kapidoc.enums.test2enum",
+            "exampleSetFlag" : false,
+            "enum" : [ "OPT1", "OPT2" ]
+          },
+          "test3" : {
+            "type" : "integer",
+            "exampleSetFlag" : false,
+            "enum" : [ 2, 1 ]
+          },
+          "test4" : {
+            "type" : "integer",
+            "exampleSetFlag" : false,
+            "enum" : [ 2, 1 ]
+          },
+          "test5" : {
+            "type" : "integer",
+            "exampleSetFlag" : false,
+            "enum" : [ 2, 1 ]
+          }
+        },
+        "exampleSetFlag" : false
+      },
+      "TestAddRequest" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "exampleSetFlag" : false
+          },
+          "description" : {
+            "type" : "string",
+            "exampleSetFlag" : false
+          },
+          "ids" : {
+            "type" : "array",
+            "exampleSetFlag" : false,
+            "items" : {
+              "type" : "integer",
+              "exampleSetFlag" : false
+            }
+          },
+          "id2" : {
+            "type" : "array",
+            "exampleSetFlag" : false,
+            "items" : {
+              "type" : "integer",
+              "exampleSetFlag" : false
+            }
+          },
+          "testList" : {
+            "type" : "array",
+            "exampleSetFlag" : false,
+            "items" : {
+              "$ref" : "#/components/schemas/TestDto",
+              "exampleSetFlag" : false
+            }
+          },
+          "time" : {
+            "type" : "string",
+            "format" : "date-time",
+            "exampleSetFlag" : false
+          }
+        },
+        "exampleSetFlag" : false
+      },
+      "LongIdsRequest" : {
+        "type" : "object",
+        "properties" : {
+          "ids" : {
+            "type" : "array",
+            "exampleSetFlag" : false,
+            "items" : {
+              "type" : "integer",
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "exampleSetFlag" : false
+      },
+      "ListQueryRequest" : {
+        "type" : "object",
+        "properties" : {
+          "current" : {
+            "type" : "integer",
+            "exampleSetFlag" : false
+          },
+          "ids" : {
+            "type" : "array",
+            "exampleSetFlag" : false,
+            "items" : {
+              "type" : "integer",
+              "exampleSetFlag" : false
+            }
+          }
+        },
+        "exampleSetFlag" : false
+      }
+    }
+  }
+}
